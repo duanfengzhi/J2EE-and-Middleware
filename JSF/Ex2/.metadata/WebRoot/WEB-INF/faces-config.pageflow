@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15430271508680" configfile="/Ex2/WebRoot/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="login" x="312" y="120" id="pf15430272132151" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" outlinks="pf15430272132152 pf15430272132153" inlinks="pf15430272132153" path="/login.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="welcome" x="348" y="540" id="pf15430272132154" referenceLink="//@navigationRule.8/@navigationCase.0/@toViewId|" outlinks="pf15430416545852 pf15430499155520 pf15430568741201 pf15430575924043" inlinks="pf15430272132152 pf15430520615602 pf15430571720252 pf15430651408835 pf15430651408836" path="/welcome.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="listAll" x="156" y="132" id="pf15430416545853" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf15430651408835" inlinks="pf15430416545852" path="/listAll.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="setStudent" x="612" y="132" id="pf15430499155521" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf15430520615602" inlinks="pf15430499155520" path="/setStudent.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="delete" x="36" y="194" id="pf15430568741200" referenceLink="//@navigationRule.6/@fromViewId|" outlinks="pf15430571720252" inlinks="pf15430568741201" path="/delete.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="addInfo" x="432" y="106" id="pf15430575924044" referenceLink="//@navigationRule.8/@fromViewId|" outlinks="pf15430651408836" inlinks="pf15430575924043" path="/addInfo.jsp"/>
+  <links id="pf15430272132152" target="pf15430272132154" source="pf15430272132151" outcome="success"/>
+  <links id="pf15430416545852" target="pf15430416545853" source="pf15430272132154" outcome="listAll"/>
+  <links id="pf15430499155520" target="pf15430499155521" source="pf15430272132154" outcome="setStudent"/>
+  <links id="pf15430520615602" target="pf15430272132154" source="pf15430499155521" outcome="return"/>
+  <links id="pf15430568741201" target="pf15430568741200" source="pf15430272132154" outcome="delete"/>
+  <links id="pf15430571720252" target="pf15430272132154" source="pf15430568741200" outcome="back"/>
+  <links id="pf15430575924043" target="pf15430575924044" source="pf15430272132154" outcome="addInfo"/>
+  <links id="pf15430651408835" target="pf15430272132154" source="pf15430416545853" outcome="listBack"/>
+  <links id="pf15430651408836" target="pf15430272132154" source="pf15430575924044" outcome="addBack"/>
+  <links id="pf15430272132153" target="pf15430272132151" source="pf15430272132151" outcome="failure">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+</pageflow:Pageflow>
